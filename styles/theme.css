@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .h1-bold {
+    @apply text-[30px] font-extrabold leading-[42px] tracking-tighter !important;
+  }
+
+  .h2-bold {
+    @apply text-[24px] font-bold leading-[31.2px] !important;
+  }
+
+  .h2-semibold {
+    @apply text-[24px] font-semibold leading-[31.2px] !important;
+  }
+
+  .h3-bold {
+    @apply text-[20px] font-bold leading-[26px] !important;
+  }
+
+  .h3-semibold {
+    @apply text-[20px] font-semibold leading-[24.8px] !important;
+  }
+
+  .base-medium {
+    @apply text-[18px] font-medium leading-[25.2px] !important;
+  }
+
+  .base-semibold {
+    @apply text-[18px] font-semibold leading-[25.2px] !important;
+  }
+
+  .base-bold {
+    @apply text-[18px] font-bold leading-[140%] !important;
+  }
+
+  .paragraph-regular {
+    @apply text-[16px] font-normal leading-[22.4px] !important;
+  }
+
+  .paragraph-medium {
+    @apply text-[16px] font-medium leading-[22.4px] !important;
+  }
+
+  .paragraph-semibold {
+    @apply text-[16px] font-semibold leading-[20.8px] !important;
+  }
+
+  .body-regular {
+    @apply text-[14px] font-normal leading-[19.6px] !important;
+  }
+
+  .body-medium {
+    @apply text-[14px] font-medium leading-[18.2px] !important;
+  }
+
+  .body-semibold {
+    @apply text-[14px] font-semibold leading-[18.2px] !important;
+  }
+
+  .small-regular {
+    @apply text-[12px] font-normal leading-[15.6px] !important;
+  }
+
+  .small-medium {
+    @apply text-[12px] font-medium leading-[15.6px] !important;
+  }
+
+  .small-semibold {
+    @apply text-[12px] font-semibold leading-[15.6px] !important;
+  }
+
+  .subtle-medium {
+    @apply text-[10px] font-medium leading-[13px] !important;
+  }
+
+  .subtle-regular {
+    @apply text-[10px] font-normal leading-[13px] !important;
+  }
+
+  .invert-colors {
+    @apply invert-0 !important;
+  }
+
+  .custom-border {
+    @apply border-dark-tertiary border !important;
+  }
+
+  .custom-modal {
+    @apply border-dark-tertiary bg-dark-secondary rounded-xl border p-2 text-white shadow-2xl !important;
+  }
+
+  .custom-modal-item {
+    @apply hover:bg-dark-tertiary data-[state=checked]:bg-dark-tertiary flex items-center rounded-md hover:cursor-pointer !important;
+  }
+
+  .tab-item {
+    @apply flex gap-2 pt-3 !important;
+  }
+
+  .custom-toast {
+    @apply bg-dark-tertiary border-none !important;
+  }
+
+  .toast-error {
+    @apply text-error !important;
+  }
+
+  .toast-success {
+    @apply text-success !important;
+  }
+
+  .toast-warning {
+    @apply text-warning !important;
+  }
+
+  .button-as-input {
+    @apply input input-lg input-bordered no-animation bg-dark-tertiary hover:input-bordered hover:bg-dark-tertiary min-h-[4rem] w-full px-6 text-lg font-normal !important;
+  }
+
+  .online::before {
+    @apply bg-primary !important;
+  }
+
+  .title-description {
+    @apply text-xl font-light text-slate-500 !important;
+  }
+
+  .neutral-text {
+    @apply font-light text-slate-500 !important;
+  }
+
+  .form-error-message {
+    @apply text-error text-xs !important;
+  }
+
+  .background-gradient {
+    background: rgb(7, 15, 56);
+    background: linear-gradient(
+      0deg,
+      rgba(7, 15, 56, 1) 0%,
+      rgba(5, 9, 31, 1) 100%
+    );
+  }
+
+  .dark-gradient {
+    background: linear-gradient(129deg, #19214a 0%, #070f38 100%);
+  }
+}

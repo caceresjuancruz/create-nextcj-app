@@ -1,15 +1,14 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { GeistSans } from 'geist/font/sans'
 import './globals.css'
 import { languages } from '../i18n/settings'
 import { LayoutProps } from '@/types'
 import { dir } from 'i18next'
+import { Providers } from './providers'
 
 export async function generateStaticParams() {
   return languages.map(lng => ({ lng }))
 }
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Next.js Starter Template with Internationalization',
@@ -19,7 +18,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children, params: { lng } }: LayoutProps) {
   return (
     <html lang={lng} dir={dir(lng)}>
-      <body className={inter.className}>{children}</body>
+      <body className={GeistSans.className}>
+        <Providers lng={lng}>{children}</Providers>
+      </body>
     </html>
   )
 }
