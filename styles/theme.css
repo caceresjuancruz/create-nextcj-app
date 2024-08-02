@@ -4,42 +4,46 @@
 
 @layer utilities {
   .hero {
-    @apply text-7xl leading-[120px] tracking-tight !important;
+    @apply text-9xl font-bold tracking-tight !important;
   }
 
   h1 {
-    @apply text-[36px] font-medium leading-[30px] tracking-tight !important;
+    @apply text-[36px] font-bold !important;
   }
 
   h2 {
-    @apply text-[30px] leading-[28px] tracking-tight !important;
+    @apply text-[30px] tracking-tight !important;
   }
 
   h3 {
-    @apply text-[26px] leading-[26px] tracking-tight !important;
+    @apply text-[26px] tracking-tight !important;
   }
 
   .base {
-    @apply text-[20px] leading-[25.2px] tracking-tight !important;
+    @apply text-[20px] tracking-tight !important;
   }
 
   p {
-    @apply text-[16px] leading-[22.4px] tracking-tight !important;
+    @apply text-[16px] tracking-tight !important;
   }
 
   .body {
-    @apply text-[14px] leading-[19.6px] tracking-tight !important;
+    @apply text-[14px] tracking-tight !important;
   }
 
   .small {
-    @apply text-[12px] leading-[15.6px] tracking-tight !important;
+    @apply text-[12px] tracking-tight !important;
   }
 
   .subtle {
-    @apply text-[10px] leading-[13px] tracking-tight !important;
+    @apply text-[10px] tracking-tight !important;
   }
 
   .invert-colors {
     @apply invert-0 !important;
+  }
+
+  .title-description {
+    @apply text-[16px] text-neutral-500 font-light !important;
   }
 }

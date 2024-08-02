@@ -37,6 +37,18 @@ const config = {
           DEFAULT: 'hsl(var(--destructive))',
           foreground: 'hsl(var(--destructive-foreground))'
         },
+        warning: {
+          DEFAULT: 'hsl(var(--warning))',
+          foreground: 'hsl(var(--warning-foreground))'
+        },
+        info: {
+          DEFAULT: 'hsl(var(--info))',
+          foreground: 'hsl(var(--info-foreground))'
+        },
+        success: {
+          DEFAULT: 'hsl(var(--success))',
+          foreground: 'hsl(var(--success-foreground))'
+        },
         muted: {
           DEFAULT: 'hsl(var(--muted))',
           foreground: 'hsl(var(--muted-foreground))'
@@ -81,12 +93,48 @@ const config = {
             'box-shadow': '0 0 0 0 theme("colors.neutral.500/0")',
             transform: 'scale(1)'
           }
+        },
+        spin: {
+          from: {
+            transform: 'rotate(0deg)'
+          },
+          to: {
+            transform: 'rotate(360deg)'
+          }
+        },
+        pulse: {
+          '0%, 100%': {
+            opacity: '0.9'
+          },
+          '50%': {
+            opacity: '0.75'
+          }
+        },
+        ping: {
+          '75%, 100%': {
+            transform: 'scale(2)',
+            opacity: '0'
+          }
+        },
+        bounce: {
+          '0%, 100%': {
+            transform: 'translateY(-25%)',
+            animationTimingFunction: 'cubic-bezier(0.8, 0, 1, 1)'
+          },
+          '50%': {
+            transform: 'translateY(0)',
+            animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)'
+          }
         }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        buttonheartbeat: 'buttonheartbeat 2s infinite ease-in-out'
+        buttonheartbeat: 'buttonheartbeat 2s infinite ease-in-out',
+        spin: 'spin 1s linear infinite',
+        pulse: 'pulse 4s infinite',
+        ping: 'ping 1s infinite',
+        bounce: 'bounce 1s infinite'
       }
     }
   },
