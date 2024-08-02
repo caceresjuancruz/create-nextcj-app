@@ -3,6 +3,7 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { SearchParamsProps } from '@/types'
 import Github from '@geist-ui/icons/github'
+import { Suspense } from 'react'
 
 export default function ExampleHome({
   searchParams,
@@ -82,7 +83,9 @@ export default function ExampleHome({
       </div>
 
       <div className='p-12'>
-        <LocalSearchbar route='example' placeholder='Search...' lng={lng} />
+        <Suspense>
+          <LocalSearchbar route='example' placeholder='Search...' lng={lng} />
+        </Suspense>
       </div>
     </section>
   )
