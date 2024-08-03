@@ -1,6 +1,7 @@
 import LocalSearchbar from '@/components/search/LocalSearchbar'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
+import { Card } from '@/components/ui/card'
 import { SearchParamsProps } from '@/types'
 import Github from '@geist-ui/icons/github'
 import { Suspense } from 'react'
@@ -14,7 +15,7 @@ export default function ExampleHome({
       <div className='container space-y-24'>
         {/*-- BUTTONS --*/}
         <div className='space-y-4'>
-          <h1>Buttons</h1>
+          <h1 className='h1'>Buttons</h1>
           <div className='space-y-4'>
             <p className='title-description'>Sizes</p>
             <div className='grid grid-cols-7 gap-12'>
@@ -52,7 +53,7 @@ export default function ExampleHome({
 
         {/*-- BADGES --*/}
         <div className='space-y-4'>
-          <h1>Badges</h1>
+          <h1 className='h1'>Badges</h1>
           <div className='space-y-4'>
             <p className='title-description'>Sizes</p>
             <div className='grid grid-cols-7 gap-12'>
@@ -77,6 +78,33 @@ export default function ExampleHome({
             <div className='grid grid-cols-7 gap-12'>
               <Badge gradientColor='#63e'>Gradient</Badge>
               <Badge bounce>Bounce</Badge>
+            </div>
+          </div>
+        </div>
+
+        {/*-- CARDS --*/}
+        <div className='space-y-4'>
+          <h1 className='h1'>Cards</h1>
+          <div className='space-y-4'>
+            <p className='title-description'>Sizes</p>
+            <div className='grid grid-cols-7 gap-12'>
+              <Card size='xs' title='Extra Small' description='Extra Small' />
+              <Card size='sm' title='Small' description='Small' />
+              <Card title='Default' description='Default' />
+              <Card size='lg' title='Large' description='Large' />
+              <Card icon={<Github size={36} />} title='Icon' />
+            </div>
+
+            <p className='title-description'>Variants</p>
+            <div className='grid grid-cols-7 gap-12'>
+              <Card title='Default' />
+              <Card title='Secondary' variant='secondary' />
+              <Card title='Outline' variant='outline' />
+            </div>
+
+            <p className='title-description'>Effects</p>
+            <div className='grid grid-cols-7 gap-12'>
+              <Card gradientColor='#63e' title='Gradient' />
             </div>
           </div>
         </div>

@@ -7,15 +7,15 @@
     @apply text-9xl font-bold tracking-tight !important;
   }
 
-  h1 {
+  .h1 {
     @apply text-[36px] font-bold !important;
   }
 
-  h2 {
+  .h2 {
     @apply text-[30px] tracking-tight !important;
   }
 
-  h3 {
+  .h3 {
     @apply text-[26px] tracking-tight !important;
   }
 
@@ -23,7 +23,7 @@
     @apply text-[20px] tracking-tight !important;
   }
 
-  p {
+  .p {
     @apply text-[16px] tracking-tight !important;
   }
 

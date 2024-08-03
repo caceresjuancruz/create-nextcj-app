@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children, params: { lng } }: LayoutProps) {
   return (
     <html lang={lng} dir={dir(lng)}>
-      <body className={GeistSans.className}>
+      <body className={`${GeistSans.className} custom-scrollbar`}>
         <Providers lng={lng}>{children}</Providers>
       </body>
     </html>
