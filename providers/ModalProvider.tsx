@@ -6,7 +6,7 @@ interface ModalProviderProps {
   lng: string
 }
 
-export function ModalProvider({ lng }: ModalProviderProps) {
+export default function ModalProvider({ lng }: ModalProviderProps) {
   const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {

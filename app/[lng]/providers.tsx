@@ -1,6 +1,7 @@
 'use client'
 
-import { ModalProvider } from '../../providers/ModalProvider'
+import ModalProvider from '@/providers/ModalProvider'
+import ReactQueryProvider from '@/providers/ReactQueryProvider'
 
 export function Providers({
   children,
@@ -11,8 +12,10 @@ export function Providers({
 }) {
   return (
     <>
-      {children}
-      <ModalProvider lng={lng} />
+      <ReactQueryProvider>
+        {children}
+        <ModalProvider lng={lng} />
+      </ReactQueryProvider>
     </>
   )
 }
