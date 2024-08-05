@@ -1,7 +1,7 @@
 import { z } from 'zod'
 
 const envVariables = z.object({
-  NEXT_PUBLIC_VERCEL_URL: z.string()
+  NEXT_PUBLIC_SITE_URL: z.string()
 })
 
 envVariables.parse(process.env)
