@@ -1,5 +1,5 @@
 'use client'
-import { example } from '@/actions/example.action'
+import { example } from '@/actions/example/example.action'
 import CustomFormField, {
   FormFieldType
 } from '@/components/form/CustomFormField'
