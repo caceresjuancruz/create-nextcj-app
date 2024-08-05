@@ -1,10 +1,17 @@
+'use client'
+import { example } from '@/actions/example.action'
+import CustomFormField, {
+  FormFieldType
+} from '@/components/form/CustomFormField'
 import LocalSearchbar from '@/components/search/LocalSearchbar'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
+import { SelectItem } from '@/components/ui/select'
 import { SearchParamsProps } from '@/types'
 import Github from '@geist-ui/icons/github'
 import { Suspense } from 'react'
+import { Control } from 'react-hook-form'
 
 export default function ExampleHome({
   searchParams,
@@ -109,6 +116,45 @@ export default function ExampleHome({
           </div>
         </div>
       </div>
+
+      {/*-- FORM INPUTS --*/}
+      {/* <div className='space-y-4'>
+        <h1 className='h1'>Form Inputs</h1>
+        <div className='space-y-4'>
+          <CustomFormField
+            fieldType={FormFieldType.SELECT}
+            control={{} as Control<any>}
+            name='ex'
+            label='Select'
+            placeholder='Select'
+          >
+            {['example1', 'example2', 'example3'].map((ex, i) => (
+              <SelectItem key={i} value={ex}>
+                <div className='flex cursor-pointer items-center gap-2'>
+                  <p>{ex}</p>
+                </div>
+              </SelectItem>
+            ))}
+          </CustomFormField>
+
+          <CustomFormField
+            fieldType={FormFieldType.DATE_PICKER}
+            control={{} as Control<any>}
+            name='date'
+            label='Date'
+            showTimeSelect
+            dateFormat='dd/MM/yyyy  -  h:mm aa'
+          />
+
+          <CustomFormField
+            fieldType={FormFieldType.TEXTAREA}
+            control={{} as Control<any>}
+            name='textarea'
+            label='Textarea'
+            placeholder='Textarea'
+          />
+        </div>
+      </div> */}
 
       <div className='p-12'>
         <Suspense>
