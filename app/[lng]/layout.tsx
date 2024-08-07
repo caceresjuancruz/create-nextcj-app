@@ -12,7 +12,8 @@ export async function generateStaticParams() {
 
 export const metadata: Metadata = {
   title: 'Nextcj',
-  description: 'Ultimate Next.js starter template for success projects'
+  description:
+    'Ultimate Next.js essential starter template for success projects'
 }
 
 export default function RootLayout({ children, params: { lng } }: LayoutProps) {

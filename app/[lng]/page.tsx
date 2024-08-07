@@ -20,8 +20,7 @@ export default function Home() {
         <div className='flex-center h-[30rem] flex-col gap-12'>
           <div className='text-center'>
             <small className='bg-gradient-to-b from-neutral-200 to-neutral-600 bg-clip-text text-transparent'>
-              Introducing simple, practical and successful Next.js starter
-              template
+              Introducing ultimate Next.js essential starter template
             </small>
             <h1 className='hero bg-gradient-to-t from-neutral-400 to-neutral-950 bg-clip-text text-transparent'>
               Nextcj
