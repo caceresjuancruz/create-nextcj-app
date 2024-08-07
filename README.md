@@ -1,6 +1,6 @@
 # Nextcj
 
-Essential Next.js starter template for successful projects.
+Introducing the ultimate Next.js essential starter template for successful projects.
 
 ## Features
 
