@@ -13,7 +13,7 @@ Essential Next.js starter template for successful projects.
 - TanStack React Query
 - Internationalization with i18next
 - Support for multiple middlewares
-- Testing with Jest
+- Testing with Jest & Cypress
 - Clean project structure
 
 ## Getting Started
