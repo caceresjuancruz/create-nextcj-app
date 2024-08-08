@@ -1,4 +1,4 @@
-# Nextcj
+<h1>Nextcj</h1>
 
 Introducing the ultimate Next.js essential starter template for successful projects.
 
@@ -44,3 +44,11 @@ Check out the Next.js deployment documentation for more details.
 
 <p>use useTranslation() for Client Components</p>
 <p>use serverSideTranslation() for Server Components</p>
+
+## Contributing
+
+Contributions to the project are welcome. Feel free to fork the repository, make your changes, and submit a pull request. You can also open issues to suggest improvements or report bugs.
+
+## License
+
+This project is licensed under the MIT License.
