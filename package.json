@@ -8,7 +8,12 @@
     "lint": "next lint",
     "test": "jest",
     "test:watch": "jest --watchAll",
-    "prettier": "prettier --write */**/*.{js,jsx,json,ts,tsx,scss,css,md}"
+    "prettier": "prettier --write */**/*.{js,jsx,json,ts,tsx,scss,css,md}",
+    "cypress:open": "cypress open",
+    "e2e": "start-server-and-test dev http://localhost:3000 \"cypress open --e2e\"",
+    "e2e:headless": "start-server-and-test dev http://localhost:3000 \"cypress run --e2e\"",
+    "component": "cypress open --component",
+    "component:headless": "cypress run --component"
   },
   "dependencies": {
     "@geist-ui/icons": "^1.0.2",
@@ -83,6 +88,7 @@
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.4.19",
+    "cypress": "^13.13.2",
     "eslint": "^8",
     "eslint-config-next": "14.2.5",
     "eslint-plugin-jest-dom": "^5.4.0",
