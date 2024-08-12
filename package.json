@@ -1,6 +1,9 @@
 {
   "name": "create-nextcj-app",
   "version": "0.1.0",
+  "bin": {
+    "create-nextcj-app": "./dist/index.ts"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",

@@ -8,7 +8,7 @@ import { useState } from 'react'
 export default function Home() {
   const [isCopied, setIsCopied] = useState(false)
   const handleCopy = () => {
-    navigator.clipboard.writeText('This text has been copied!')
+    navigator.clipboard.writeText('npx create-nextcj-app')
     setIsCopied(true)
     setTimeout(() => setIsCopied(false), 2000)
   }
