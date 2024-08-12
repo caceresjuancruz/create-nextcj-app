@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('../../styles/theme.css');
-
 @layer base {
   :root {
     --background: 0 0% 100%;

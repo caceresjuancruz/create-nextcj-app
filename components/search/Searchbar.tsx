@@ -6,18 +6,21 @@ import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import Search from '@geist-ui/icons/search'
 import { useTranslation } from '@/app/i18n/client'
+import { cn } from '@/lib/cn'
 
 interface CustomSearchbarProps {
   route: string
   placeholder: string
   otherClasses?: string
+  pill?: boolean
   lng: string
 }
 
-const LocalSearchbar = ({
+const Searchbar = ({
   route,
   placeholder,
   otherClasses,
+  pill,
   lng
 }: CustomSearchbarProps) => {
   const { t } = useTranslation(lng, 'translations')
@@ -54,11 +57,16 @@ const LocalSearchbar = ({
     return () => clearTimeout(delayDebounce)
   }, [search, route, path, router, searchParams, query, lng])
 
+  const rounded = pill ? 'rounded-full' : 'rounded-md'
   return (
     <div
-      className={`flex h-12 grow items-center gap-1 rounded-md border px-4 ${otherClasses}`}
+      className={cn(
+        'flex h-12 grow items-center gap-1 border px-4',
+        rounded,
+        otherClasses
+      )}
     >
-      <Search size={20} color='gray' />
+      <Search size={20} strokeWidth={2.5} color='gray' />
 
       <Input
         type='text'
@@ -71,4 +79,4 @@ const LocalSearchbar = ({
   )
 }
 
-export default LocalSearchbar
+export default Searchbar

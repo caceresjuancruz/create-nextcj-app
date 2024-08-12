@@ -3,7 +3,7 @@ import { example } from '@/actions/example/example.action'
 import CustomFormField, {
   FormFieldType
 } from '@/components/form/CustomFormField'
-import LocalSearchbar from '@/components/search/LocalSearchbar'
+import Searchbar from '@/components/search/Searchbar'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
@@ -12,6 +12,7 @@ import { SearchParamsProps } from '@/types'
 import Github from '@geist-ui/icons/github'
 import { Suspense } from 'react'
 import { Control } from 'react-hook-form'
+import { Typography } from '@/components/ui/typography'
 
 export default function ExampleHome({
   searchParams,
@@ -20,6 +21,26 @@ export default function ExampleHome({
   return (
     <section className='py-24'>
       <div className='container space-y-24'>
+        {/*-- TYPOGRAPHY --*/}
+        <div className='space-y-4'>
+          <h1 className='h1'>Typography</h1>
+          <div className='space-y-4'>
+            <Typography variant='h1'>Heading 1</Typography>
+            <Typography variant='h2'>Heading 2</Typography>
+            <Typography variant='h3'>Heading 3</Typography>
+            <Typography variant='h4'>Heading 4</Typography>
+            <Typography variant='h5'>Heading 5</Typography>
+            <Typography variant='body' as='div'>
+              Body text
+            </Typography>
+            <Typography variant='bodysmall' as='div'>
+              Body small
+            </Typography>
+            <Typography variant='small'>Small text</Typography>
+            <Typography variant='blockquote'>Blockquote</Typography>
+          </div>
+        </div>
+
         {/*-- BUTTONS --*/}
         <div className='space-y-4'>
           <h1 className='h1'>Buttons</h1>
@@ -158,7 +179,7 @@ export default function ExampleHome({
 
       <div className='p-12'>
         <Suspense>
-          <LocalSearchbar route='example' placeholder='Search...' lng={lng} />
+          <Searchbar pill route='example' placeholder='Search...' lng={lng} />
         </Suspense>
       </div>
     </section>
