@@ -1,18 +1,13 @@
 'use client'
-import { example } from '@/actions/example/example.action'
-import CustomFormField, {
-  FormFieldType
-} from '@/components/form/CustomFormField'
+
 import Searchbar from '@/components/search/Searchbar'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
-import { SelectItem } from '@/components/ui/select'
+import { Typography } from '@/components/ui/typography'
 import { SearchParamsProps } from '@/types'
 import Github from '@geist-ui/icons/github'
 import { Suspense } from 'react'
-import { Control } from 'react-hook-form'
-import { Typography } from '@/components/ui/typography'
 
 export default function ExampleHome({
   searchParams,
