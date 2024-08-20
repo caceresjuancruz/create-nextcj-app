@@ -1,9 +1,9 @@
-import * as React from 'react'
 import { Slot } from '@radix-ui/react-slot'
 import { cva, type VariantProps } from 'class-variance-authority'
+import * as React from 'react'
 
 import { cn } from '@/lib/cn'
-import { generateTailwindGradientClass } from '@/lib/utils'
+import { generateTailwindGradientClass, variantColorMap } from '@/lib/utils'
 
 const buttonVariants = cva(
   'inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50',
@@ -42,7 +42,8 @@ export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   asChild?: boolean
-  gradientColor?: string
+  color?: string
+  gradient?: boolean
   heartbeat?: boolean
   hoverExpand?: boolean
   pill?: boolean
@@ -57,7 +58,8 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       variant,
       size,
       asChild = false,
-      gradientColor,
+      color,
+      gradient,
       heartbeat,
       hoverExpand,
       pill,
@@ -69,9 +71,11 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ) => {
     const Comp = asChild ? Slot : 'button'
 
-    const gradient = gradientColor
-      ? generateTailwindGradientClass(gradientColor)
-      : ''
+    const btnColor = color ? color : variantColorMap[variant ?? 'default']
+
+    const gradientColor = gradient
+      ? generateTailwindGradientClass(btnColor)
+      : btnColor
 
     let extraClasses = ''
 
@@ -144,7 +148,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         {...props}
         style={{
-          background: gradient
+          background: gradientColor
         }}
         disabled={loading}
       />

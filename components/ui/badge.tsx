@@ -1,8 +1,8 @@
-import * as React from 'react'
 import { cva, type VariantProps } from 'class-variance-authority'
+import * as React from 'react'
 
 import { cn } from '@/lib/cn'
-import { generateTailwindGradientClass } from '@/lib/utils'
+import { generateTailwindGradientClass, variantColorMap } from '@/lib/utils'
 
 const badgeVariants = cva(
   'inline-flex select-none items-center rounded-full border text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2',
@@ -40,7 +40,8 @@ export interface BadgeProps
   extends React.HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof badgeVariants> {
   size?: 'xs' | 'default' | 'sm' | 'lg'
-  gradientColor?: string
+  color?: string
+  gradient?: boolean
   bounce?: boolean
 }
 
@@ -48,13 +49,16 @@ function Badge({
   className,
   variant,
   size,
-  gradientColor,
+  color,
+  gradient,
   bounce,
   ...props
 }: BadgeProps) {
-  const gradient = gradientColor
-    ? generateTailwindGradientClass(gradientColor)
-    : ''
+  const badgeColor = color ? color : variantColorMap[variant ?? 'default']
+
+  const gradientColor = gradient
+    ? generateTailwindGradientClass(badgeColor)
+    : badgeColor
 
   let extraClasses = ''
   extraClasses = gradientColor ? 'border-none' : ''
@@ -68,7 +72,7 @@ function Badge({
       className={cn(badgeVariants({ variant, size }), className, extraClasses)}
       {...props}
       style={{
-        background: gradient
+        background: gradientColor
       }}
     />
   )

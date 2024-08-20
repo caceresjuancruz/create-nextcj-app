@@ -1,7 +1,7 @@
 import * as React from 'react'
 
 import { cn } from '@/lib/cn'
-import { generateTailwindGradientClass } from '@/lib/utils'
+import { generateTailwindGradientClass, variantColorMap } from '@/lib/utils'
 import { cva, VariantProps } from 'class-variance-authority'
 
 const cardVariants = cva(
@@ -35,7 +35,8 @@ export interface CardProps
     VariantProps<typeof cardVariants> {
   size?: 'xs' | 'default' | 'sm' | 'lg' | 'icon'
   variant?: 'default' | 'outline' | 'secondary'
-  gradientColor?: string
+  color?: string
+  gradient?: boolean
   title: string
   description?: string
   icon?: React.ReactNode
@@ -46,8 +47,9 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
     {
       className,
       size = 'default',
-      variant = 'default',
-      gradientColor,
+      variant = 'secondary',
+      color,
+      gradient,
       title,
       description,
       icon,
@@ -57,9 +59,12 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
   ) => {
     let extraClasses = ''
     size = icon ? 'icon' : size
-    const gradient = gradientColor
-      ? generateTailwindGradientClass(gradientColor)
-      : ''
+
+    const cardColor = color ? color : variantColorMap[variant ?? 'secondary']
+
+    const gradientColor = gradient
+      ? generateTailwindGradientClass(cardColor)
+      : cardColor
 
     let titleSize = 'text-md'
     if (size === 'xs') titleSize = 'text-xs'
@@ -79,7 +84,7 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
         className={cn(cardVariants({ variant, size, className }), extraClasses)}
         {...props}
         style={{
-          background: gradient
+          background: gradientColor
         }}
       >
         {icon ? (
@@ -150,4 +155,4 @@ const CardFooter = React.forwardRef<
 ))
 CardFooter.displayName = 'CardFooter'
 
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
+export { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }

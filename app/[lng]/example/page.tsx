@@ -1,12 +1,11 @@
 'use client'
 
-import Searchbar from '@/components/search/Searchbar'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import { Card } from '@/components/ui/card'
-import { Typography } from '@/components/ui/typography'
+import BadgeSection from '@/components/sections/BadgeSection'
+import ButtonSection from '@/components/sections/ButtonSection'
+import CardSection from '@/components/sections/CardSection'
+import TypographySection from '@/components/sections/TypographySection'
+import Searchbar from '@/components/ui/searchbar'
 import { SearchParamsProps } from '@/types'
-import Github from '@geist-ui/icons/github'
 import { Suspense } from 'react'
 
 export default function ExampleHome({
@@ -14,124 +13,11 @@ export default function ExampleHome({
   params: { lng }
 }: SearchParamsProps) {
   return (
-    <section className='py-24'>
-      <div className='container space-y-24'>
-        {/*-- TYPOGRAPHY --*/}
-        <div className='space-y-4'>
-          <h1 className='h1'>Typography</h1>
-          <div className='space-y-4'>
-            <Typography variant='h1'>Heading 1</Typography>
-            <Typography variant='h2'>Heading 2</Typography>
-            <Typography variant='h3'>Heading 3</Typography>
-            <Typography variant='h4'>Heading 4</Typography>
-            <Typography variant='h5'>Heading 5</Typography>
-            <Typography variant='body' as='div'>
-              Body text
-            </Typography>
-            <Typography variant='bodysmall' as='div'>
-              Body small
-            </Typography>
-            <Typography variant='small'>Small text</Typography>
-            <Typography variant='blockquote'>Blockquote</Typography>
-          </div>
-        </div>
-
-        {/*-- BUTTONS --*/}
-        <div className='space-y-4'>
-          <h1 className='h1'>Buttons</h1>
-          <div className='space-y-4'>
-            <p className='title-description'>Sizes</p>
-            <div className='grid grid-cols-7 gap-12'>
-              <Button size='xs'>Extra Small</Button>
-              <Button size='sm'>Small</Button>
-              <Button size='default'>Default</Button>
-              <Button size='lg'>Large</Button>
-              <Button size='icon'>Icon</Button>
-            </div>
-
-            <p className='title-description'>Variants</p>
-            <div className='grid grid-cols-7 gap-12'>
-              <Button variant='default'>Default</Button>
-              <Button variant='secondary'>Secondary</Button>
-              <Button variant='destructive'>Destructive</Button>
-              <Button variant='outline'>Outline</Button>
-              <Button variant='ghost'>Ghost</Button>
-              <Button variant='link'>Link</Button>
-              <Button variant='warning'>Warning</Button>
-              <Button variant='info'>Info</Button>
-              <Button variant='success'>Success</Button>
-            </div>
-
-            <p className='title-description'>Effects</p>
-            <div className='grid grid-cols-7 gap-12'>
-              <Button hoverExpand>Hover Expand</Button>
-              <Button heartbeat>Heartbeat</Button>
-              <Button gradientColor='#63e'>Gradient</Button>
-              <Button pill>Pill</Button>
-              <Button loading>Loading</Button>
-              <Button icon={<Github size={20} strokeWidth={2} />}>Icon</Button>
-            </div>
-          </div>
-        </div>
-
-        {/*-- BADGES --*/}
-        <div className='space-y-4'>
-          <h1 className='h1'>Badges</h1>
-          <div className='space-y-4'>
-            <p className='title-description'>Sizes</p>
-            <div className='grid grid-cols-7 gap-12'>
-              <Badge size='xs'>Extra Small</Badge>
-              <Badge size='sm'>Small</Badge>
-              <Badge size='default'>Default</Badge>
-              <Badge size='lg'>Large</Badge>
-            </div>
-
-            <p className='title-description'>Variants</p>
-            <div className='grid grid-cols-7 gap-12'>
-              <Badge variant='default'>Default</Badge>
-              <Badge variant='secondary'>Secondary</Badge>
-              <Badge variant='destructive'>Destructive</Badge>
-              <Badge variant='outline'>Outline</Badge>
-              <Badge variant='warning'>Warning</Badge>
-              <Badge variant='info'>Info</Badge>
-              <Badge variant='success'>Success</Badge>
-            </div>
-
-            <p className='title-description'>Effects</p>
-            <div className='grid grid-cols-7 gap-12'>
-              <Badge gradientColor='#63e'>Gradient</Badge>
-              <Badge bounce>Bounce</Badge>
-            </div>
-          </div>
-        </div>
-
-        {/*-- CARDS --*/}
-        <div className='space-y-4'>
-          <h1 className='h1'>Cards</h1>
-          <div className='space-y-4'>
-            <p className='title-description'>Sizes</p>
-            <div className='grid grid-cols-7 gap-12'>
-              <Card size='xs' title='Extra Small' description='Extra Small' />
-              <Card size='sm' title='Small' description='Small' />
-              <Card title='Default' description='Default' />
-              <Card size='lg' title='Large' description='Large' />
-              <Card icon={<Github size={36} />} title='Icon' />
-            </div>
-
-            <p className='title-description'>Variants</p>
-            <div className='grid grid-cols-7 gap-12'>
-              <Card title='Default' />
-              <Card title='Secondary' variant='secondary' />
-              <Card title='Outline' variant='outline' />
-            </div>
-
-            <p className='title-description'>Effects</p>
-            <div className='grid grid-cols-7 gap-12'>
-              <Card gradientColor='#63e' title='Gradient' />
-            </div>
-          </div>
-        </div>
-      </div>
+    <section className='space-y-8 p-4 md:space-y-16 md:p-24'>
+      <TypographySection />
+      <ButtonSection />
+      <BadgeSection />
+      <CardSection />
 
       {/*-- FORM INPUTS --*/}
       {/* <div className='space-y-4'>

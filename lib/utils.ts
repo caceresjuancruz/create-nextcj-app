@@ -56,7 +56,7 @@ export const removeKeysFromQuery = ({
 
 function lightenColor(color: string) {
   const percent = 20
-  const num = parseInt(color.slice(1), 16),
+  const num = parseInt(color?.slice(1), 16),
     amt = Math.round(2.55 * percent),
     R = (num >> 16) + amt,
     G = ((num >> 8) & 0x00ff) + amt,
@@ -69,3 +69,13 @@ export function generateTailwindGradientClass(color: string) {
   const style = `linear-gradient(129deg, ${color} 0%, ${lighterColor} 100%)`
   return style
 }
+
+export const variantColorMap: { [key: string]: string } = {
+  default: '#262626',
+  secondary: '#f5f5f5',
+  destructive: '#e64545',
+  warning: '#f5a623',
+  info: '#258fca',
+  success: '#40a76d',
+  ghost: '#f5f5f5',
+};
