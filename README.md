@@ -45,6 +45,10 @@ Check out the Next.js deployment documentation for more details.
 <p>use useTranslation() for Client Components</p>
 <p>use serverSideTranslation() for Server Components</p>
 
+## Icons
+
+https://geist-ui.dev/en-us/components/icons
+
 ## Contributing
 
 Contributions to the project are welcome. Feel free to fork the repository, make your changes, and submit a pull request. You can also open issues to suggest improvements or report bugs.
