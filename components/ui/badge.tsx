@@ -56,9 +56,9 @@ function Badge({
 }: BadgeProps) {
   const badgeColor = color ? color : variantColorMap[variant ?? 'default']
 
-  const gradientColor = gradient
-    ? generateTailwindGradientClass(badgeColor)
-    : badgeColor
+  const gradientColor = React.useMemo(() => {
+    return gradient ? generateTailwindGradientClass(badgeColor) : badgeColor
+  }, [gradient, badgeColor])
 
   let extraClasses = ''
   extraClasses = gradientColor ? 'border-none' : ''

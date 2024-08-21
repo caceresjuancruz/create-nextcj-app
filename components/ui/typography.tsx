@@ -33,16 +33,17 @@ const tags: Record<Variant, ElementType> = {
 }
 
 const sizes: Record<Variant, string> = {
-  h1: 'text-5xl font-bold sm:text-4xl scroll-m-20 tracking-tight',
-  h2: 'text-4xl font-bold sm:text-3xl scroll-m-20 tracking-tight',
-  h3: 'text-3xl font-bold sm:text-2xl scroll-m-20 tracking-tight',
-  h4: 'text-2xl font-bold sm:text-1xl scroll-m-20 tracking-tight',
-  h5: 'text-xl font-bold sm:text-lg scroll-m-20 tracking-tight',
-  h6: 'text-lg font-bold sm:text-md scroll-m-20 tracking-tight',
-  body: 'text-lg sm:text-md leading-7 [&:not(:first-child)]:mt-6 tracking-tight',
-  bodysmall: 'text-md sm:text-sm tracking-tight',
-  small: 'text-sm sm:text-xs tracking-tight',
-  blockquote: 'text-lg sm:text-md mt-6 border-l-2 pl-6 italic tracking-tight'
+  h1: 'text-5xl sm:text-4xl scroll-m-20 tracking-tight font-semibold',
+  h2: 'text-4xl sm:text-3xl scroll-m-20 tracking-tight font-semibold',
+  h3: 'text-3xl sm:text-2xl scroll-m-20 tracking-tight font-semibold',
+  h4: 'text-2xl sm:text-1xl scroll-m-20 tracking-tight font-medium',
+  h5: 'text-xl sm:text-lg scroll-m-20 tracking-tight font-medium',
+  h6: 'text-lg sm:text-md scroll-m-20 tracking-tight font-medium',
+  body: 'text-lg sm:text-md font-light leading-7 [&:not(:first-child)]:mt-6 tracking-tight',
+  bodysmall: 'text-md sm:text-sm tracking-tight font-light',
+  small: 'text-sm sm:text-xs tracking-tight font-light',
+  blockquote:
+    'text-lg sm:text-md mt-6 border-l-2 pl-6 italic tracking-tight font-thin'
 }
 
 const Typography = ({ variant, children, className, as }: Props) => {
