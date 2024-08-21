@@ -40,12 +40,12 @@ Open http://localhost:3000 with your browser to see the result.
 This project follows a clean and organized structure to help you scale and maintain your codebase effectively.
 
 Folders purpose:
-- actions: server actions, server utilities, types and database related
-- lib: client utilities
-- providers: client providers
-- types: client types, interfaces, etc.
-- __tests__: Jest tests
-- cypress: Cypress tests
+- __actions__: server actions, server utilities, types and database related
+- __lib__: client utilities
+- __providers__: client providers
+- __types__: client types, interfaces, etc.
+- ____tests____: Jest tests
+- __cypress__: Cypress tests
 
 ## Deploy on Vercel
 The easiest way to deploy your Next.js app is to use the Vercel Platform from the creators of Next.js.
