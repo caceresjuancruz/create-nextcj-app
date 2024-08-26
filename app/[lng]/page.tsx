@@ -35,7 +35,7 @@ export default function Home() {
         variant='small'
         className='bg-gradient-to-b from-neutral-200 to-neutral-600 bg-clip-text text-transparent'
       >
-        Introducing ultimate Next.js essential starter template
+        Introducing ultimate essential Next.js starter template
       </Typography>
       <h1 className='bg-gradient-to-t from-neutral-400 to-neutral-950 bg-clip-text text-7xl font-thin tracking-widest text-transparent md:text-9xl'>
         Nextcj
