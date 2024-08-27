@@ -29,11 +29,11 @@
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-    --warning: 43 96% 56%; /* Example warning color */
+    --warning: 43 96% 56%;
     --warning-foreground: 43 100% 20%;
-    --info: 197 76% 36%; /* Example info color */
+    --info: 197 76% 36%;
     --info-foreground: 197 100% 98%;
-    --success: 145 63% 42%; /* Example success color */
+    --success: 145 63% 42%;
     --success-foreground: 145 100% 98%;
   }
 
