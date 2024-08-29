@@ -1,6 +1,6 @@
+import Searchbar from '@/components/ui/searchbar'
+import { Typography } from '@/components/ui/typography'
 import { Suspense } from 'react'
-import Searchbar from '../ui/searchbar'
-import { Typography } from '../ui/typography'
 
 interface SearchSectionProps {
   lng: string

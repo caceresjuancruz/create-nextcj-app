@@ -2,8 +2,7 @@
 
 import { useTranslation } from '@/app/i18n/client'
 import { Input } from '@/components/ui/input'
-import { cn } from '@/lib/cn'
-import { formUrlQuery, removeKeysFromQuery } from '@/lib/utils'
+import { cn, formUrlQuery, removeKeysFromQuery } from '@/lib/utils'
 import Search from '@geist-ui/icons/search'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react'

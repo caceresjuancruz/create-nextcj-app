@@ -1,11 +1,9 @@
-'use client'
-
-import BadgeSection from '@/components/sections/BadgeSection'
-import ButtonSection from '@/components/sections/ButtonSection'
-import CardSection from '@/components/sections/CardSection'
-import FormSection from '@/components/sections/FormSection'
-import SearchSection from '@/components/sections/SearchSection'
-import TypographySection from '@/components/sections/TypographySection'
+import BadgeSection from '@/components/examples/sections/BadgeSection'
+import ButtonSection from '@/components/examples/sections/ButtonSection'
+import FormSection from '@/components/examples/sections/FormSection'
+import SearchSection from '@/components/examples/sections/SearchSection'
+import SwitcherSection from '@/components/examples/sections/SwitcherSection'
+import TypographySection from '@/components/examples/sections/TypographySection'
 import { SearchParamsProps } from '@/types'
 
 export default function ExampleHome({
@@ -17,9 +15,9 @@ export default function ExampleHome({
       <TypographySection />
       <ButtonSection />
       <BadgeSection />
-      <CardSection />
       <SearchSection lng={lng} />
-      <FormSection lng={lng} />
+      <SwitcherSection />
+      <FormSection />
     </section>
   )
 }

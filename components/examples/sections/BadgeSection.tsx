@@ -1,5 +1,5 @@
-import { Badge } from '../ui/badge'
-import { Typography } from '../ui/typography'
+import { Typography } from '@/components/ui/typography'
+import { Badge } from '@components/ui/badge'
 
 const BadgeSection = () => {
   return (
@@ -7,7 +7,7 @@ const BadgeSection = () => {
       <Typography variant='h3'>Badge</Typography>
       <div className='flex flex-col gap-4 rounded-xl border p-8'>
         <Typography variant='h5'>Sizes</Typography>
-        <div className='grid grid-cols-1 gap-12 lg:grid-cols-7'>
+        <div className='grid grid-cols-1 gap-12 sm:grid-cols-7'>
           <Badge size='xs'>Extra Small</Badge>
           <Badge size='sm'>Small</Badge>
           <Badge size='default'>Default</Badge>

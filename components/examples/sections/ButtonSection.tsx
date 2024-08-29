@@ -1,6 +1,6 @@
+import { Button } from '@/components/ui/button'
+import { Typography } from '@/components/ui/typography'
 import Github from '@geist-ui/icons/github'
-import { Button } from '../ui/button'
-import { Typography } from '../ui/typography'
 
 const ButtonSection = () => {
   return (
