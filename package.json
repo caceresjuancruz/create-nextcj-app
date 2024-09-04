@@ -1,6 +1,25 @@
 {
   "name": "create-nextcj-app",
-  "version": "0.1.0",
+  "version": "0.2.0",
+  "description": "Ultimate Next.js essential starter template for success projects",
+  "author": "caceresjuancruz",
+  "license": "MIT",
+  "keywords": [
+    "nextcj",
+    "create-nextcj-app",
+    "nextjs-starter",
+    "starter-template",
+    "nextjs",
+    "tailwindcss",
+    "typescript",
+    "react",
+    "starter",
+    "template",
+    "ultimate",
+    "essential",
+    "success",
+    "projects"
+  ],
   "bin": {
     "create-nextcj-app": "./dist/index.ts"
   },
