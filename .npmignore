@@ -1,0 +1,10 @@
+dist/
+.github/
+.git/
+LICENSE
+package-lock.json
+README.md
+.env
+node_modules/
+.vscode/
+.swc

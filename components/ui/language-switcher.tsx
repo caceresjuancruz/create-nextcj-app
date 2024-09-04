@@ -1,5 +1,6 @@
 'use client'
 
+import { changeLng } from '@/actions/cookie/cookie.action'
 import { languages } from '@/app/i18n/settings'
 import {
   Menubar,
@@ -10,7 +11,6 @@ import {
 } from '@/components/ui/menubar'
 import { Language } from '@/types'
 import { Globe } from 'lucide-react'
-//import { cookies as NextCookies } from 'next/headers'
 import { usePathname, useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { useCookies } from 'react-cookie'
@@ -28,7 +28,7 @@ const LanguageSwitcher = () => {
 
   async function handleLanguageChange(lang: string) {
     setLng(lang as Language)
-    //NextCookies().set('accept-language', lng)
+    await changeLng(lang as Language)
     const newPath = pathname.replace(/\/[a-z]{2}($|\/)/, `/${lang}$1`)
     router.replace(newPath)
   }

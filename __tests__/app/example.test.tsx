@@ -6,6 +6,6 @@ describe('Example', () => {
   const setup = () => render(<Page />)
   it('should render Nextcj', () => {
     setup()
-    expect(screen.getByText('Nextcj')).toBeInTheDocument()
+    expect(screen.getByText('Nextcj'))?.toBeInTheDocument()
   })
 })
