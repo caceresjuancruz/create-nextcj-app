@@ -1,9 +1,10 @@
 import Searchbar from '@/components/ui/searchbar'
 import { Typography } from '@/components/ui/typography'
+import { Language } from '@/types'
 import { Suspense } from 'react'
 
 interface SearchSectionProps {
-  lng: string
+  lng: Language
 }
 
 const SearchSection = ({ lng }: SearchSectionProps) => {

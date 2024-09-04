@@ -2,16 +2,16 @@
 export type Language = 'en' | 'es'
 
 export interface LayoutProps {
-  params: { lng: string }
+  params: { lng: Language }
   children: React.ReactNode
 }
 
 export interface ParamsProps {
-  params: { lng: string }
+  params: { lng: Language }
 }
 
 export interface SearchParamsProps {
-  params: { lng: string }
+  params: { lng: Language }
   searchParams: { [key: string]: string | undefined }
 }
 

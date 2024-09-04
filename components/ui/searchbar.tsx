@@ -3,6 +3,7 @@
 import { useTranslation } from '@/app/i18n/client'
 import { Input } from '@/components/ui/input'
 import { cn, formUrlQuery, removeKeysFromQuery } from '@/lib/utils'
+import { Language } from '@/types'
 import Search from '@geist-ui/icons/search'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
@@ -12,7 +13,7 @@ interface CustomSearchbarProps {
   placeholder: string
   otherClasses?: string
   pill?: boolean
-  lng: string
+  lng: Language
 }
 
 const Searchbar = ({

@@ -1,9 +1,10 @@
 'use client'
 
+import { Language } from '@/types'
 import { useEffect, useState } from 'react'
 
 interface ModalProviderProps {
-  lng: string
+  lng: Language
 }
 
 export default function ModalProvider({ lng }: ModalProviderProps) {
