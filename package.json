@@ -1,7 +1,7 @@
 {
   "name": "create-nextcj-app",
   "version": "0.2.1",
-  "description": "Ultimate Next.js essential starter template for success projects",
+  "description": "Ultimate essential Next.js starter template for success projects",
   "author": "caceresjuancruz",
   "license": "MIT",
   "keywords": [
@@ -81,7 +81,7 @@
     "i18next-resources-to-backend": "^1.2.1",
     "input-otp": "^1.2.4",
     "lucide-react": "^0.428.0",
-    "next": "14.2.5",
+    "next": "14.2.10",
     "next-themes": "^0.3.0",
     "query-string": "^9.1.0",
     "react": "^18",
