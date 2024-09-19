@@ -1,7 +1,7 @@
 <h1>Nextcj</h1>
 
-Introducing the ultimate Next.js essential starter template for successful projects.
-
+Introducing the ultimate essential Next.js starter template for successful projects.
+ 
 ## Features
 
 - Next.js 14 (App Router)
