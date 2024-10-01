@@ -39,7 +39,7 @@ const ButtonSection = () => {
             <Button color='#63e' gradient>
               Gradient
             </Button>
-            <Button pill>Pill</Button>
+            <Button pill>Pill Button</Button>
             <Button loading>Loading</Button>
             <Button icon={<Github size={20} strokeWidth={2} />}>Icon</Button>
           </div>

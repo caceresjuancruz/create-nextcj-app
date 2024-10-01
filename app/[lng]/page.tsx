@@ -55,7 +55,7 @@ export default function Home() {
           pill
           className='border-neutral-500 bg-transparent hover:bg-transparent'
           onClick={handleCopy}
-          icon={isCopied ? <Check size={20} /> : <Copy size={20} />}
+          icon={isCopied ? <Check size={16} /> : <Copy size={16} />}
         >
           npx create-nextcj-app
         </Button>
