@@ -14,9 +14,6 @@ const TypographySection = () => {
         <Typography variant='body' as='div'>
           Body text
         </Typography>
-        <Typography variant='bodysmall' as='div'>
-          Body small
-        </Typography>
         <Typography variant='small'>Small text</Typography>
         <Typography variant='blockquote'>Blockquote</Typography>
       </div>

@@ -61,7 +61,7 @@ const Searchbar = ({
   return (
     <div
       className={cn(
-        'flex h-12 grow items-center gap-1 border px-4',
+        'flex h-9 grow items-center border px-2',
         rounded,
         otherClasses
       )}

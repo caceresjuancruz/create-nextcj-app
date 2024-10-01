@@ -21,6 +21,7 @@ export default function Home() {
         href='https://github.com/caceresjuancruz/create-nextcj-app'
         target='_blank'
         className='absolute right-4 top-4'
+        passHref
       >
         <Button
           size='xs'
@@ -42,7 +43,7 @@ export default function Home() {
       </h1>
 
       <div className='flex flex-col gap-8'>
-        <Link href='/example'>
+        <Link href='/example' passHref className='mx-auto w-fit rounded-lg'>
           <Button size='default' hoverExpand gradient className='shadow-xl'>
             Examples
           </Button>

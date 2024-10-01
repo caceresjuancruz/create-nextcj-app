@@ -18,6 +18,20 @@ const config = {
       }
     },
     extend: {
+      screens: {
+        xs: '375px',
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px'
+      },
+      fontSize: {
+        xs: '0.75rem',
+        sm: '0.875rem',
+        md: '1rem',
+        lg: '1.125rem',
+        xl: '1.25rem'
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
@@ -124,6 +138,26 @@ const config = {
             transform: 'translateY(0)',
             animationTimingFunction: 'cubic-bezier(0, 0, 0.2, 1)'
           }
+        },
+        moveUp: {
+          '0%': { transform: 'translateY(5%)', opacity: '0' },
+          '100%': { transform: 'translateY(0%)', opacity: '1' }
+        },
+        moveDown: {
+          '0%': { transform: 'translateY(-5%)', opacity: '0' },
+          '100%': { transform: 'translateY(0%)', opacity: '1' }
+        },
+        moveRight: {
+          '0%': { transform: 'translateX(-5%)', opacity: '0' },
+          '100%': { transform: 'translateX(0%)', opacity: '1' }
+        },
+        moveLeft: {
+          '0%': { transform: 'translateX(5%)', opacity: '0' },
+          '100%': { transform: 'translateX(0%)', opacity: '1' }
+        },
+        appear: {
+          from: { opacity: '0' },
+          to: { opacity: '1' }
         }
       },
       animation: {
@@ -133,7 +167,12 @@ const config = {
         spin: 'spin 1s linear infinite',
         pulse: 'pulse 4s infinite',
         ping: 'ping 1s infinite',
-        bounce: 'bounce 1s infinite'
+        bounce: 'bounce 1s infinite',
+        moveUp: 'moveUp 1.4s ease forwards',
+        moveDown: 'moveDown 1.4s ease forwards',
+        moveRight: 'moveRight 1.4s ease forwards',
+        moveLeft: 'moveLeft 1.4s ease forwards',
+        appear: 'appear 1s 1s forwards'
       }
     }
   },

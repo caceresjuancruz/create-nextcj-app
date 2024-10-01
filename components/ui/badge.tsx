@@ -4,7 +4,7 @@ import * as React from 'react'
 import { cn, generateTailwindGradientClass, variantColorMap } from '@/lib/utils'
 
 const badgeVariants = cva(
-  'inline-flex select-none items-center rounded-full border text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2',
+  'inline-flex select-none items-center rounded-full border text-xs w-fit font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2',
   {
     variants: {
       variant: {
@@ -22,10 +22,10 @@ const badgeVariants = cva(
           'border-transparent bg-success text-success-foreground hover:bg-success/80'
       },
       size: {
-        xs: 'px-2 py-0.5 text-xs h-4',
-        default: 'px-2.5 py-0.5 text-xs h-6',
-        sm: 'px-3 py-1 text-xs h-5',
-        lg: 'px-4 py-1.5 text-sm h-7'
+        xs: 'px-1.5 py-0.5 text-[8px] h-4',
+        sm: 'px-2 text-[10px] h-4',
+        default: 'px-2.5 text-[11px] h-5',
+        lg: 'px-3 text-[12px] h-6'
       }
     },
     defaultVariants: {
